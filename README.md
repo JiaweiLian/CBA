@@ -1,6 +1,6 @@
 # CBA (Contextual Background Attack)
 
-Note that we choose aircraft as the instersted target during experiments, so the proposed CBA is also called Attack Aircraft with Aircraft (A3)
+Note that we choose aircraft as the insterested target during experiments, so the proposed CBA is also called Attack Aircraft with Aircraft (A3)
 
 ## Introduction
 

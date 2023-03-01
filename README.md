@@ -1,35 +1,44 @@
-# CBA (Contextual Background Attack)
+# Adversarial YOLO
+This repository is based on the marvis YOLOv2 inplementation: https://github.com/marvis/pytorch-yolo2
 
-## Introduction
-
-In this paper, a novel Contextual Background Attack (CBA) framework is proposed to fool aerial detectors in the physical world, which can achieve strong attack efficacy and transferability in real-world scenarios even without smudging the interested objects at all. Specifically, the targets of interest, *i.e.* the aircraft in aerial images, are adopted to mask adversarial patches. The pixels outside the mask area are optimized to make the generated adversarial patches closely cover the critical contextual background area for detection, which contributes to gifting adversarial patches with more robust and transferable attack potency in the real world.
-To further strengthen the attack performance, the adversarial patches are forced to be outside targets during training, by which the detected objects of interest, both on and outside patches, benefit the accumulation of attack efficacy. Consequently, the sophisticatedly designed patches are gifted with solid fooling efficacy against objects both on and outside the adversarial patches simultaneously. We expect that the proposed physical attack method will serve as a benchmark for assessing the adversarial robustness of diverse aerial detectors and defense methods. We summarize our algorithm in [CBA: Contextual Background Attack against Optical Aerial Detection in the Physical World](https://arxiv.org/pdf/2302.13519.pdf).
-
-## Requirements:
-
-* Pytorch 1.10
-
-* Python 3.6
-
-## Citation
-
-If you use CBA method for attacks in your research, please consider citing
-
+This work corresponds to the following paper: https://arxiv.org/abs/1904.08653:
 ```
-@ARTICLE{2023arXiv230213519L,
-       author = {{Lian}, Jiawei and {Wang}, Xiaofei and {Su}, Yuru and {Ma}, Mingyang and {Mei}, Shaohui},
-        title = "{CBA: Contextual Background Attack against Optical Aerial Detection in the Physical World}",
-      journal = {arXiv e-prints},
-     keywords = {Computer Science - Computer Vision and Pattern Recognition},
-         year = 2023,
-        month = feb,
-          eid = {arXiv:2302.13519},
-        pages = {arXiv:2302.13519},
-          doi = {10.48550/arXiv.2302.13519},
-archivePrefix = {arXiv},
-       eprint = {2302.13519},
- primaryClass = {cs.CV},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2023arXiv230213519L},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+@inproceedings{thysvanranst2019,
+    title={Fooling automated surveillance cameras: adversarial patches to attack person detection},
+    author={Thys, Simen and Van Ranst, Wiebe and Goedem\'e, Toon},
+    booktitle={CVPRW: Workshop on The Bright and Dark Sides of Computer Vision: Challenges and Opportunities for Privacy and Security},
+    year={2019}
 }
+```
+
+If you use this work, please cite this paper.
+
+# What you need
+We use Python 3.6.
+Make sure that you have a working implementation of PyTorch installed, to do this see: https://pytorch.org/
+To visualise progress we use tensorboardX which can be installed using pip:
+```
+pip install tensorboardX tensorboard
+```
+No installation is necessary, you can simply run the python code straight from this directory.
+
+Make sure you have the YOLOv2 MS COCO weights:
+```
+mkdir weights; curl https://pjreddie.com/media/files/yolov2.weights -o weights/yolo.weights
+```
+
+Get the INRIA dataset:
+```
+curl ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar -o inria.tar
+tar xf inria.tar
+mv INRIAPerson inria
+cp -r yolo-labels inria/Train/pos/
+```
+
+# Generating a patch
+`patch_config.py` contains configuration of different experiments. You can design your own experiment by inheriting from the base `BaseConfig` class or an existing experiment. `ReproducePaperObj` reproduces the patch that minimizes object score from the paper (With a lower batch size to fit on a desktop GPU).
+
+You can generate this patch by running:
+```
+python train_patch.py paper_obj
 ```

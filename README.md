@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this paper, a novel Contextual Background Attack (CBA) framework is proposed to fool aerial detectors in the physical world, which can achieve strong attack efficacy and transferability in real-world scenarios even without smudging the interested objects at all. Specifically, the targets of interest, **i.e.** the aircraft in aerial images, are adopted to mask adversarial patches.
+In this paper, a novel Contextual Background Attack (CBA) framework is proposed to fool aerial detectors in the physical world, which can achieve strong attack efficacy and transferability in real-world scenarios even without smudging the interested objects at all. Specifically, the targets of interest, *i.e.* the aircraft in aerial images, are adopted to mask adversarial patches.
    The pixels outside the mask area are optimized to make the generated adversarial patches closely cover the critical contextual background area for detection, which contributes to gifting adversarial patches with more robust and transferable attack potency in the real world.
    To further strengthen the attack performance, the adversarial patches are forced to be outside targets during training, by which the detected objects of interest, both on and outside patches, benefit the accumulation of attack efficacy. 
    Consequently, the sophisticatedly designed patches are gifted with solid fooling efficacy against objects both on and outside the adversarial patches simultaneously.

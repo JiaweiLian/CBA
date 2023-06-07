@@ -17,20 +17,13 @@ In this paper, a novel Contextual Background Attack (CBA) framework is proposed 
 If you use CBA method for attacks in your research, please consider citing
 
 ```
-@ARTICLE{2023arXiv230213519L,
-       author = {{Lian}, Jiawei and {Wang}, Xiaofei and {Su}, Yuru and {Ma}, Mingyang and {Mei}, Shaohui},
-        title = "{CBA: Contextual Background Attack against Optical Aerial Detection in the Physical World}",
-      journal = {arXiv e-prints},
-     keywords = {Computer Science - Computer Vision and Pattern Recognition},
-         year = 2023,
-        month = feb,
-          eid = {arXiv:2302.13519},
-        pages = {arXiv:2302.13519},
-          doi = {10.48550/arXiv.2302.13519},
-archivePrefix = {arXiv},
-       eprint = {2302.13519},
- primaryClass = {cs.CV},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2023arXiv230213519L},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+@article{lian2023cba,
+  title={CBA: Contextual Background Attack against Optical Aerial Detection in the Physical World},
+  author={Lian, Jiawei and Wang, Xiaofei and Su, Yuru and Ma, Mingyang and Mei, Shaohui},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  volume={61},
+  pages={1--16},
+  year={2023},
+  publisher={IEEE}
 }
 ```

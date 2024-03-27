@@ -14,6 +14,14 @@ In this paper, a novel Contextual Background Attack (CBA) framework is proposed 
 
 * CUDA 11.1
 
+* mmdetection 2.23
+
+* mmcv 1.5.0
+
+## Run
+
+
+
 ## Citation
 
 If you use CBA method for attacks in your research, please consider citing

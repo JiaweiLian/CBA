@@ -12,6 +12,8 @@ In this paper, a novel Contextual Background Attack (CBA) framework is proposed 
 
 * Python 3.6
 
+* CUDA 11.1
+
 ## Citation
 
 If you use CBA method for attacks in your research, please consider citing

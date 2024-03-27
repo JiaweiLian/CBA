@@ -24,7 +24,7 @@ Prepare necessary files, such as model weights and related config files, and cha
 
 Then run
 
-* python train_patch_mmdetection.py
+* python train_patch_A3_mmdetection.py
 
 ## Citation
 

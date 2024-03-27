@@ -20,7 +20,11 @@ In this paper, a novel Contextual Background Attack (CBA) framework is proposed 
 
 ## Run
 
+Prepare necessary files, such as model weights and related config files, and change the path as yours.
 
+Then run
+
+* python train_patch_mmdetection.py
 
 ## Citation
 
